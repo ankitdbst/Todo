@@ -1008,3 +1008,627 @@ REQUEST_URI=/todo.yii/index.php/items/1
 in /opt/lampp/htdocs/todo.yii/protected/views/items/view.php (15)
 in /opt/lampp/htdocs/todo.yii/protected/controllers/ItemsController.php (55)
 in /opt/lampp/htdocs/todo.yii/index.php (13)
+2012/04/07 20:27:44 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Invalid request. Please do not repeat this request again.' in /opt/lampp/htdocs/todo.yii/protected/controllers/ItemsController.php:122
+Stack trace:
+#0 [internal function]: ItemsController->actionDelete('1')
+#1 /opt/lampp/htdocs/YiiRoot/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(ItemsController), Array)
+#2 /opt/lampp/htdocs/YiiRoot/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(ItemsController), Object(ReflectionMethod), Array)
+#3 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#4 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#6 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#7 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#8 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(292): CFilterChain->run()
+#10 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(276): CController->run('delete')
+#12 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(135): CWebApplication->runController('items/delete')
+#13 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#14 /opt/lampp/htdocs/todo.yii/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/todo.yii/index.php/items/delete/1
+HTTP_REFERER=http://localhost/todo.yii/index.php/site/login
+---
+2012/04/07 20:30:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /opt/lampp/htdocs/YiiRoot/framework/web/auth/CAccessControlFilter.php:157
+Stack trace:
+#0 /opt/lampp/htdocs/YiiRoot/framework/web/auth/CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(292): CFilterChain->run()
+#6 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(276): CController->run('admin')
+#8 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(135): CWebApplication->runController('items/admin')
+#9 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /opt/lampp/htdocs/todo.yii/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/todo.yii/index.php/items/admin
+HTTP_REFERER=http://localhost/todo.yii/index.php/items/index
+---
+2012/04/07 20:30:26 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /opt/lampp/htdocs/YiiRoot/framework/web/auth/CAccessControlFilter.php:157
+Stack trace:
+#0 /opt/lampp/htdocs/YiiRoot/framework/web/auth/CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(292): CFilterChain->run()
+#6 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(276): CController->run('delete')
+#8 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(135): CWebApplication->runController('items/delete')
+#9 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /opt/lampp/htdocs/todo.yii/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/todo.yii/index.php/items/delete/2
+HTTP_REFERER=http://localhost/todo.yii/index.php/items/2
+---
+2012/04/07 20:37:37 [error] [php] include(Users.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/opt/lampp/htdocs/YiiRoot/framework/YiiBase.php:418)
+Stack trace:
+#0 /opt/lampp/htdocs/todo.yii/protected/components/UserIdentity.php(16): spl_autoload_call()
+#1 /opt/lampp/htdocs/todo.yii/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#2 /opt/lampp/htdocs/YiiRoot/framework/validators/CInlineValidator.php(43): LoginForm->authenticate()
+#3 /opt/lampp/htdocs/YiiRoot/framework/validators/CValidator.php(197): CInlineValidator->validateAttribute()
+#4 /opt/lampp/htdocs/YiiRoot/framework/base/CModel.php(158): CInlineValidator->validate()
+#5 /opt/lampp/htdocs/todo.yii/protected/controllers/SiteController.php(88): LoginForm->validate()
+#6 /opt/lampp/htdocs/YiiRoot/framework/web/actions/CInlineAction.php(50): SiteController->actionLogin()
+#7 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(309): CInlineAction->runWithParams()
+#8 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(287): SiteController->runAction()
+#9 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#10 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(276): SiteController->run()
+#11 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#12 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /opt/lampp/htdocs/todo.yii/index.php(13): CWebApplication->run()
+REQUEST_URI=/todo.yii/index.php/site/login
+in /opt/lampp/htdocs/todo.yii/protected/components/UserIdentity.php (16)
+in /opt/lampp/htdocs/todo.yii/protected/models/LoginForm.php (52)
+in /opt/lampp/htdocs/todo.yii/protected/controllers/SiteController.php (88)
+2012/04/07 20:38:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "r/gii".' in /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(135): CWebApplication->runController('r/gii')
+#1 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/todo.yii/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/todo.yii/index.php/r/gii
+---
+2012/04/22 06:45:13 [error] [php] PDO::__construct() [<a href='pdo.--construct'>pdo.--construct</a>]: [2002] No such file or directory (trying to connect via unix:///opt/lampp/var/mysql/mysql.sock) (/opt/lampp/htdocs/YiiRoot/framework/db/CDbConnection.php:422)
+Stack trace:
+#0 /opt/lampp/htdocs/YiiRoot/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /opt/lampp/htdocs/YiiRoot/framework/db/CDbConnection.php(309): CDbConnection->setActive()
+#2 /opt/lampp/htdocs/YiiRoot/framework/base/CModule.php(388): CDbConnection->init()
+#3 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(431): CWebApplication->getComponent()
+#4 /opt/lampp/htdocs/YiiRoot/framework/db/ar/CActiveRecord.php(615): CWebApplication->getDb()
+#5 /opt/lampp/htdocs/YiiRoot/framework/db/ar/CActiveRecord.php(2263): Items->getDbConnection()
+#6 /opt/lampp/htdocs/YiiRoot/framework/db/ar/CActiveRecord.php(379): CActiveRecordMetaData->__construct()
+#7 /opt/lampp/htdocs/YiiRoot/framework/web/CActiveDataProvider.php(75): model()
+#8 /opt/lampp/htdocs/todo.yii/protected/controllers/ItemsController.php(130): CActiveDataProvider->__construct()
+#9 /opt/lampp/htdocs/YiiRoot/framework/web/actions/CInlineAction.php(50): ItemsController->actionIndex()
+#10 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(309): CInlineAction->runWithParams()
+#11 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilterChain.php(134): ItemsController->runAction()
+#12 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#13 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#14 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CInlineFilter.php(59): ItemsController->filterAccessControl()
+#15 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#16 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(292): CFilterChain->run()
+#17 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(266): ItemsController->runActionWithFilters()
+#18 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(276): ItemsController->run()
+#19 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#20 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#21 /opt/lampp/htdocs/todo.yii/index.php(13): CWebApplication->run()
+REQUEST_URI=/todo.yii/index.php?r=items/index
+in /opt/lampp/htdocs/todo.yii/protected/controllers/ItemsController.php (130)
+in /opt/lampp/htdocs/todo.yii/index.php (13)
+2012/04/22 07:00:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "viewall".' in /opt/lampp/htdocs/YiiRoot/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(271): CController->missingAction('viewall')
+#1 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(276): CController->run('viewall')
+#2 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(135): CWebApplication->runController('items/viewall')
+#3 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/todo.yii/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/todo.yii/index.php?r=items/viewall
+---
+2012/04/22 07:00:16 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /opt/lampp/htdocs/YiiRoot/framework/web/CController.php:337
+Stack trace:
+#0 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#3 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(292): CFilterChain->run()
+#7 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(276): CController->run('view')
+#9 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(135): CWebApplication->runController('items/view')
+#10 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /opt/lampp/htdocs/todo.yii/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/todo.yii/index.php?r=items/view
+---
+2012/04/22 07:10:29 [error] [exception.CException] exception 'CException' with message 'Property "CMenu.footer" is not defined.' in /opt/lampp/htdocs/YiiRoot/framework/base/CComponent.php:174
+Stack trace:
+#0 /opt/lampp/htdocs/YiiRoot/framework/web/CWidgetFactory.php(162): CComponent->__set('footer', Array)
+#1 /opt/lampp/htdocs/YiiRoot/framework/web/CBaseController.php(147): CWidgetFactory->createWidget(Object(ItemsController), 'zii.widgets.CMe...', Array)
+#2 /opt/lampp/htdocs/YiiRoot/framework/web/CBaseController.php(173): CBaseController->createWidget('zii.widgets.CMe...', Array)
+#3 /opt/lampp/htdocs/todo.yii/protected/views/layouts/main.php(47): CBaseController->widget('zii.widgets.CMe...', Array)
+#4 /opt/lampp/htdocs/YiiRoot/framework/web/CBaseController.php(127): require('/opt/lampp/htdo...')
+#5 /opt/lampp/htdocs/YiiRoot/framework/web/CBaseController.php(96): CBaseController->renderInternal('/opt/lampp/htdo...', Array, true)
+#6 /opt/lampp/htdocs/YiiRoot/framework/web/widgets/CContentDecorator.php(77): CBaseController->renderFile('/opt/lampp/htdo...', Array, true)
+#7 /opt/lampp/htdocs/YiiRoot/framework/web/widgets/CContentDecorator.php(55): CContentDecorator->decorate('<div class="spa...')
+#8 /opt/lampp/htdocs/YiiRoot/framework/web/widgets/COutputProcessor.php(45): CContentDecorator->processOutput('<div class="spa...')
+#9 /opt/lampp/htdocs/YiiRoot/framework/web/CBaseController.php(207): COutputProcessor->run()
+#10 /opt/lampp/htdocs/YiiRoot/framework/web/CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#11 /opt/lampp/htdocs/todo.yii/protected/views/layouts/column2.php(21): CBaseController->endContent()
+#12 /opt/lampp/htdocs/YiiRoot/framework/web/CBaseController.php(127): require('/opt/lampp/htdo...')
+#13 /opt/lampp/htdocs/YiiRoot/framework/web/CBaseController.php(96): CBaseController->renderInternal('/opt/lampp/htdo...', Array, true)
+#14 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(785): CBaseController->renderFile('/opt/lampp/htdo...', Array, true)
+#15 /opt/lampp/htdocs/todo.yii/protected/controllers/ItemsController.php(133): CController->render('index', Array)
+#16 /opt/lampp/htdocs/YiiRoot/framework/web/actions/CInlineAction.php(50): ItemsController->actionIndex()
+#17 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#18 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#20 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#21 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#22 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(292): CFilterChain->run()
+#24 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(276): CController->run('index')
+#26 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(135): CWebApplication->runController('items/index')
+#27 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#28 /opt/lampp/htdocs/todo.yii/index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/todo.yii/index.php?r=items/index
+HTTP_REFERER=http://localhost/todo.yii/index.php?r=items/admin
+---
+2012/04/22 07:20:08 [error] [php] Undefined variable: model (/opt/lampp/htdocs/todo.yii/protected/views/items/index.php:14)
+Stack trace:
+#0 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(870): ItemsController->renderFile()
+#1 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(783): ItemsController->renderPartial()
+#2 /opt/lampp/htdocs/todo.yii/protected/controllers/ItemsController.php(133): ItemsController->render()
+#3 /opt/lampp/htdocs/YiiRoot/framework/web/actions/CInlineAction.php(50): ItemsController->actionIndex()
+#4 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilterChain.php(134): ItemsController->runAction()
+#6 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CInlineFilter.php(59): ItemsController->filterAccessControl()
+#9 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(292): CFilterChain->run()
+#11 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(266): ItemsController->runActionWithFilters()
+#12 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(276): ItemsController->run()
+#13 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#14 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /opt/lampp/htdocs/todo.yii/index.php(13): CWebApplication->run()
+REQUEST_URI=/todo.yii/index.php?r=items/index
+in /opt/lampp/htdocs/todo.yii/protected/views/items/index.php (14)
+in /opt/lampp/htdocs/todo.yii/protected/controllers/ItemsController.php (133)
+in /opt/lampp/htdocs/todo.yii/index.php (13)
+2012/04/22 07:20:09 [error] [php] Undefined variable: model (/opt/lampp/htdocs/todo.yii/protected/views/items/index.php:14)
+Stack trace:
+#0 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(870): ItemsController->renderFile()
+#1 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(783): ItemsController->renderPartial()
+#2 /opt/lampp/htdocs/todo.yii/protected/controllers/ItemsController.php(133): ItemsController->render()
+#3 /opt/lampp/htdocs/YiiRoot/framework/web/actions/CInlineAction.php(50): ItemsController->actionIndex()
+#4 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilterChain.php(134): ItemsController->runAction()
+#6 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CInlineFilter.php(59): ItemsController->filterAccessControl()
+#9 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(292): CFilterChain->run()
+#11 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(266): ItemsController->runActionWithFilters()
+#12 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(276): ItemsController->run()
+#13 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#14 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /opt/lampp/htdocs/todo.yii/index.php(13): CWebApplication->run()
+REQUEST_URI=/todo.yii/index.php?r=items/index
+in /opt/lampp/htdocs/todo.yii/protected/views/items/index.php (14)
+in /opt/lampp/htdocs/todo.yii/protected/controllers/ItemsController.php (133)
+in /opt/lampp/htdocs/todo.yii/index.php (13)
+2012/04/22 07:23:16 [error] [php] Undefined variable: model (/opt/lampp/htdocs/todo.yii/protected/views/items/index.php:14)
+Stack trace:
+#0 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(870): ItemsController->renderFile()
+#1 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(783): ItemsController->renderPartial()
+#2 /opt/lampp/htdocs/todo.yii/protected/controllers/ItemsController.php(135): ItemsController->render()
+#3 /opt/lampp/htdocs/YiiRoot/framework/web/actions/CInlineAction.php(50): ItemsController->actionIndex()
+#4 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilterChain.php(134): ItemsController->runAction()
+#6 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CInlineFilter.php(59): ItemsController->filterAccessControl()
+#9 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(292): CFilterChain->run()
+#11 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(266): ItemsController->runActionWithFilters()
+#12 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(276): ItemsController->run()
+#13 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#14 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /opt/lampp/htdocs/todo.yii/index.php(13): CWebApplication->run()
+REQUEST_URI=/todo.yii/index.php?r=items/index
+in /opt/lampp/htdocs/todo.yii/protected/views/items/index.php (14)
+in /opt/lampp/htdocs/todo.yii/protected/controllers/ItemsController.php (135)
+in /opt/lampp/htdocs/todo.yii/index.php (13)
+2012/04/22 07:23:19 [error] [php] Undefined variable: model (/opt/lampp/htdocs/todo.yii/protected/views/items/index.php:14)
+Stack trace:
+#0 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(870): ItemsController->renderFile()
+#1 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(783): ItemsController->renderPartial()
+#2 /opt/lampp/htdocs/todo.yii/protected/controllers/ItemsController.php(135): ItemsController->render()
+#3 /opt/lampp/htdocs/YiiRoot/framework/web/actions/CInlineAction.php(50): ItemsController->actionIndex()
+#4 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilterChain.php(134): ItemsController->runAction()
+#6 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CInlineFilter.php(59): ItemsController->filterAccessControl()
+#9 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(292): CFilterChain->run()
+#11 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(266): ItemsController->runActionWithFilters()
+#12 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(276): ItemsController->run()
+#13 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#14 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /opt/lampp/htdocs/todo.yii/index.php(13): CWebApplication->run()
+REQUEST_URI=/todo.yii/index.php?r=items/index
+in /opt/lampp/htdocs/todo.yii/protected/views/items/index.php (14)
+in /opt/lampp/htdocs/todo.yii/protected/controllers/ItemsController.php (135)
+in /opt/lampp/htdocs/todo.yii/index.php (13)
+2012/04/22 07:29:36 [error] [php] Object of class CActiveDataProvider could not be converted to string (/opt/lampp/htdocs/todo.yii/protected/views/items/index.php:5)
+Stack trace:
+#0 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(870): ItemsController->renderFile()
+#1 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(783): ItemsController->renderPartial()
+#2 /opt/lampp/htdocs/todo.yii/protected/controllers/ItemsController.php(133): ItemsController->render()
+#3 /opt/lampp/htdocs/YiiRoot/framework/web/actions/CInlineAction.php(50): ItemsController->actionIndex()
+#4 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilterChain.php(134): ItemsController->runAction()
+#6 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CInlineFilter.php(59): ItemsController->filterAccessControl()
+#9 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(292): CFilterChain->run()
+#11 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(266): ItemsController->runActionWithFilters()
+#12 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(276): ItemsController->run()
+#13 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#14 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /opt/lampp/htdocs/todo.yii/index.php(13): CWebApplication->run()
+REQUEST_URI=/todo.yii/index.php?r=items/index
+in /opt/lampp/htdocs/todo.yii/protected/views/items/index.php (5)
+in /opt/lampp/htdocs/todo.yii/protected/controllers/ItemsController.php (133)
+in /opt/lampp/htdocs/todo.yii/index.php (13)
+2012/04/22 07:43:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "index" was not found.' in /opt/lampp/htdocs/YiiRoot/framework/web/actions/CViewAction.php:113
+Stack trace:
+#0 /opt/lampp/htdocs/YiiRoot/framework/web/actions/CViewAction.php(124): CViewAction->resolveView('index')
+#1 /opt/lampp/htdocs/YiiRoot/framework/web/actions/CAction.php(75): CViewAction->run()
+#2 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(309): CAction->runWithParams(Array)
+#3 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(287): CController->runAction(Object(CViewAction))
+#4 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(266): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(276): CController->run('page')
+#6 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(135): CWebApplication->runController('site/page')
+#7 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /opt/lampp/htdocs/todo.yii/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/todo.yii/index.php?r=site/page
+HTTP_REFERER=http://localhost/todo.yii/index.php?r=items/update&id=2
+---
+2012/04/22 07:43:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "index" was not found.' in /opt/lampp/htdocs/YiiRoot/framework/web/actions/CViewAction.php:113
+Stack trace:
+#0 /opt/lampp/htdocs/YiiRoot/framework/web/actions/CViewAction.php(124): CViewAction->resolveView('index')
+#1 /opt/lampp/htdocs/YiiRoot/framework/web/actions/CAction.php(75): CViewAction->run()
+#2 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(309): CAction->runWithParams(Array)
+#3 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(287): CController->runAction(Object(CViewAction))
+#4 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(266): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(276): CController->run('page')
+#6 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(135): CWebApplication->runController('site/page')
+#7 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /opt/lampp/htdocs/todo.yii/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/todo.yii/index.php?r=site/page
+HTTP_REFERER=http://localhost/todo.yii/index.php?r=site/page
+---
+2012/04/22 07:43:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "about".' in /opt/lampp/htdocs/YiiRoot/framework/web/CController.php:484
+Stack trace:
+#0 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(271): CController->missingAction('about')
+#1 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(276): CController->run('about')
+#2 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(135): CWebApplication->runController('site/about')
+#3 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/todo.yii/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/todo.yii/index.php?r=site/about
+HTTP_REFERER=http://localhost/todo.yii/index.php?r=site/page
+---
+2012/04/22 07:43:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "index" was not found.' in /opt/lampp/htdocs/YiiRoot/framework/web/actions/CViewAction.php:113
+Stack trace:
+#0 /opt/lampp/htdocs/YiiRoot/framework/web/actions/CViewAction.php(124): CViewAction->resolveView('index')
+#1 /opt/lampp/htdocs/YiiRoot/framework/web/actions/CAction.php(75): CViewAction->run()
+#2 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(309): CAction->runWithParams(Array)
+#3 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(287): CController->runAction(Object(CViewAction))
+#4 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(266): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(276): CController->run('page')
+#6 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(135): CWebApplication->runController('site/page')
+#7 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /opt/lampp/htdocs/todo.yii/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/todo.yii/index.php?r=site/page
+HTTP_REFERER=http://localhost/todo.yii/index.php?r=site/page
+---
+2012/04/22 07:44:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "index" was not found.' in /opt/lampp/htdocs/YiiRoot/framework/web/actions/CViewAction.php:113
+Stack trace:
+#0 /opt/lampp/htdocs/YiiRoot/framework/web/actions/CViewAction.php(124): CViewAction->resolveView('index')
+#1 /opt/lampp/htdocs/YiiRoot/framework/web/actions/CAction.php(75): CViewAction->run()
+#2 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(309): CAction->runWithParams(Array)
+#3 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(287): CController->runAction(Object(CViewAction))
+#4 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(266): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(276): CController->run('page')
+#6 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(135): CWebApplication->runController('site/page')
+#7 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /opt/lampp/htdocs/todo.yii/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/todo.yii/index.php?r=site/page
+HTTP_REFERER=http://localhost/todo.yii/index.php?r=site/page
+---
+2012/04/22 07:44:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "index" was not found.' in /opt/lampp/htdocs/YiiRoot/framework/web/actions/CViewAction.php:113
+Stack trace:
+#0 /opt/lampp/htdocs/YiiRoot/framework/web/actions/CViewAction.php(124): CViewAction->resolveView('index')
+#1 /opt/lampp/htdocs/YiiRoot/framework/web/actions/CAction.php(75): CViewAction->run()
+#2 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(309): CAction->runWithParams(Array)
+#3 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(287): CController->runAction(Object(CViewAction))
+#4 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(266): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(276): CController->run('page')
+#6 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(135): CWebApplication->runController('site/page')
+#7 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /opt/lampp/htdocs/todo.yii/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/todo.yii/index.php?r=site/page
+HTTP_REFERER=http://localhost/todo.yii/index.php?r=site/page
+---
+2012/04/22 07:54:08 [error] [php] Undefined variable: model (/opt/lampp/htdocs/todo.yii/protected/views/items/index.php:10)
+Stack trace:
+#0 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(870): ItemsController->renderFile()
+#1 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(783): ItemsController->renderPartial()
+#2 /opt/lampp/htdocs/todo.yii/protected/controllers/ItemsController.php(133): ItemsController->render()
+#3 /opt/lampp/htdocs/YiiRoot/framework/web/actions/CInlineAction.php(50): ItemsController->actionIndex()
+#4 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilterChain.php(134): ItemsController->runAction()
+#6 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CInlineFilter.php(59): ItemsController->filterAccessControl()
+#9 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(292): CFilterChain->run()
+#11 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(266): ItemsController->runActionWithFilters()
+#12 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(276): ItemsController->run()
+#13 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#14 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /opt/lampp/htdocs/todo.yii/index.php(13): CWebApplication->run()
+REQUEST_URI=/todo.yii/index.php?r=items/index
+in /opt/lampp/htdocs/todo.yii/protected/views/items/index.php (10)
+in /opt/lampp/htdocs/todo.yii/protected/controllers/ItemsController.php (133)
+in /opt/lampp/htdocs/todo.yii/index.php (13)
+2012/04/22 07:59:49 [error] [php] Undefined variable: model (/opt/lampp/htdocs/todo.yii/protected/views/items/index.php:10)
+Stack trace:
+#0 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(870): ItemsController->renderFile()
+#1 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(783): ItemsController->renderPartial()
+#2 /opt/lampp/htdocs/todo.yii/protected/controllers/ItemsController.php(133): ItemsController->render()
+#3 /opt/lampp/htdocs/YiiRoot/framework/web/actions/CInlineAction.php(50): ItemsController->actionIndex()
+#4 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilterChain.php(134): ItemsController->runAction()
+#6 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CInlineFilter.php(59): ItemsController->filterAccessControl()
+#9 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(292): CFilterChain->run()
+#11 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(266): ItemsController->runActionWithFilters()
+#12 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(276): ItemsController->run()
+#13 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#14 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /opt/lampp/htdocs/todo.yii/index.php(13): CWebApplication->run()
+REQUEST_URI=/todo.yii/index.php?r=items/index
+in /opt/lampp/htdocs/todo.yii/protected/views/items/index.php (10)
+in /opt/lampp/htdocs/todo.yii/protected/controllers/ItemsController.php (133)
+in /opt/lampp/htdocs/todo.yii/index.php (13)
+2012/04/22 07:59:49 [error] [php] Undefined variable: model (/opt/lampp/htdocs/todo.yii/protected/views/items/index.php:10)
+Stack trace:
+#0 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(870): ItemsController->renderFile()
+#1 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(783): ItemsController->renderPartial()
+#2 /opt/lampp/htdocs/todo.yii/protected/controllers/ItemsController.php(133): ItemsController->render()
+#3 /opt/lampp/htdocs/YiiRoot/framework/web/actions/CInlineAction.php(50): ItemsController->actionIndex()
+#4 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilterChain.php(134): ItemsController->runAction()
+#6 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CInlineFilter.php(59): ItemsController->filterAccessControl()
+#9 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(292): CFilterChain->run()
+#11 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(266): ItemsController->runActionWithFilters()
+#12 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(276): ItemsController->run()
+#13 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#14 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /opt/lampp/htdocs/todo.yii/index.php(13): CWebApplication->run()
+REQUEST_URI=/todo.yii/index.php?r=items/index
+in /opt/lampp/htdocs/todo.yii/protected/views/items/index.php (10)
+in /opt/lampp/htdocs/todo.yii/protected/controllers/ItemsController.php (133)
+in /opt/lampp/htdocs/todo.yii/index.php (13)
+2012/04/22 08:44:08 [error] [php] Undefined variable: model (/opt/lampp/htdocs/todo.yii/protected/views/items/index.php:10)
+Stack trace:
+#0 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(870): ItemsController->renderFile()
+#1 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(783): ItemsController->renderPartial()
+#2 /opt/lampp/htdocs/todo.yii/protected/controllers/ItemsController.php(133): ItemsController->render()
+#3 /opt/lampp/htdocs/YiiRoot/framework/web/actions/CInlineAction.php(50): ItemsController->actionIndex()
+#4 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilterChain.php(134): ItemsController->runAction()
+#6 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CInlineFilter.php(59): ItemsController->filterAccessControl()
+#9 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(292): CFilterChain->run()
+#11 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(266): ItemsController->runActionWithFilters()
+#12 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(276): ItemsController->run()
+#13 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#14 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /opt/lampp/htdocs/todo.yii/index.php(13): CWebApplication->run()
+REQUEST_URI=/todo.yii/index.php?r=items/index
+in /opt/lampp/htdocs/todo.yii/protected/views/items/index.php (10)
+in /opt/lampp/htdocs/todo.yii/protected/controllers/ItemsController.php (133)
+in /opt/lampp/htdocs/todo.yii/index.php (13)
+2012/04/22 09:43:30 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Invalid request. Please do not repeat this request again.' in /opt/lampp/htdocs/todo.yii/protected/controllers/ItemsController.php:122
+Stack trace:
+#0 [internal function]: ItemsController->actionDelete('ID')
+#1 /opt/lampp/htdocs/YiiRoot/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(ItemsController), Array)
+#2 /opt/lampp/htdocs/YiiRoot/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(ItemsController), Object(ReflectionMethod), Array)
+#3 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#4 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#6 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#7 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#8 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(292): CFilterChain->run()
+#10 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(276): CController->run('delete')
+#12 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(135): CWebApplication->runController('items/delete')
+#13 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#14 /opt/lampp/htdocs/todo.yii/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/todo.yii/index.php?r=items/delete&id=ID
+HTTP_REFERER=http://localhost/todo.yii/index.php?r=items/index
+---
+2012/04/22 09:44:21 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Invalid request. Please do not repeat this request again.' in /opt/lampp/htdocs/todo.yii/protected/controllers/ItemsController.php:122
+Stack trace:
+#0 [internal function]: ItemsController->actionDelete('2')
+#1 /opt/lampp/htdocs/YiiRoot/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(ItemsController), Array)
+#2 /opt/lampp/htdocs/YiiRoot/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(ItemsController), Object(ReflectionMethod), Array)
+#3 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#4 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#6 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#7 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#8 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(292): CFilterChain->run()
+#10 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(276): CController->run('delete')
+#12 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(135): CWebApplication->runController('items/delete')
+#13 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#14 /opt/lampp/htdocs/todo.yii/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/todo.yii/index.php?r=items/delete&id=2
+HTTP_REFERER=http://localhost/todo.yii/index.php?r=items/index
+---
+2012/04/22 09:55:42 [error] [php] Undefined variable: imageUrl (/opt/lampp/htdocs/todo.yii/protected/views/items/_view.php:4)
+Stack trace:
+#0 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(870): ItemsController->renderFile()
+#1 /opt/lampp/htdocs/YiiRoot/framework/zii/widgets/CListView.php(242): ItemsController->renderPartial()
+#2 /opt/lampp/htdocs/YiiRoot/framework/zii/widgets/CBaseListView.php(158): CListView->renderItems()
+#3 unknown(0): CListView->renderSection()
+#4 /opt/lampp/htdocs/YiiRoot/framework/zii/widgets/CBaseListView.php(141): preg_replace_callback()
+#5 /opt/lampp/htdocs/YiiRoot/framework/zii/widgets/CBaseListView.php(126): CListView->renderContent()
+#6 /opt/lampp/htdocs/YiiRoot/framework/web/CBaseController.php(174): CListView->run()
+#7 /opt/lampp/htdocs/todo.yii/protected/views/items/index.php(16): ItemsController->widget()
+#8 /opt/lampp/htdocs/YiiRoot/framework/web/CBaseController.php(127): require()
+#9 /opt/lampp/htdocs/YiiRoot/framework/web/CBaseController.php(96): ItemsController->renderInternal()
+#10 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(870): ItemsController->renderFile()
+#11 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(783): ItemsController->renderPartial()
+#12 /opt/lampp/htdocs/todo.yii/protected/controllers/ItemsController.php(143): ItemsController->render()
+#13 /opt/lampp/htdocs/YiiRoot/framework/web/actions/CInlineAction.php(50): ItemsController->actionIndex()
+#14 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(309): CInlineAction->runWithParams()
+#15 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilterChain.php(134): ItemsController->runAction()
+#16 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#17 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#18 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CInlineFilter.php(59): ItemsController->filterAccessControl()
+#19 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#20 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(292): CFilterChain->run()
+#21 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(266): ItemsController->runActionWithFilters()
+#22 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(276): ItemsController->run()
+#23 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#24 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#25 /opt/lampp/htdocs/todo.yii/index.php(13): CWebApplication->run()
+REQUEST_URI=/todo.yii/index.php?r=items/index
+in /opt/lampp/htdocs/todo.yii/protected/views/items/_view.php (4)
+in /opt/lampp/htdocs/todo.yii/protected/views/items/index.php (16)
+in /opt/lampp/htdocs/todo.yii/protected/controllers/ItemsController.php (143)
+2012/04/22 09:59:43 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Invalid request. Please do not repeat this request again.' in /opt/lampp/htdocs/todo.yii/protected/controllers/ItemsController.php:122
+Stack trace:
+#0 [internal function]: ItemsController->actionDelete('2')
+#1 /opt/lampp/htdocs/YiiRoot/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(ItemsController), Array)
+#2 /opt/lampp/htdocs/YiiRoot/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(ItemsController), Object(ReflectionMethod), Array)
+#3 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#4 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#6 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#7 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#8 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(292): CFilterChain->run()
+#10 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(276): CController->run('delete')
+#12 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(135): CWebApplication->runController('items/delete')
+#13 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#14 /opt/lampp/htdocs/todo.yii/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/todo.yii/index.php?r=items/delete&id=2
+HTTP_REFERER=http://localhost/todo.yii/index.php?r=items/index
+---
+2012/04/22 10:12:06 [error] [php] include(MPFunctions.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/opt/lampp/htdocs/YiiRoot/framework/YiiBase.php:418)
+Stack trace:
+#0 /opt/lampp/htdocs/todo.yii/protected/views/items/_view.php(6): spl_autoload_call()
+#1 /opt/lampp/htdocs/YiiRoot/framework/web/CBaseController.php(127): require()
+#2 /opt/lampp/htdocs/YiiRoot/framework/web/CBaseController.php(96): ItemsController->renderInternal()
+#3 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(870): ItemsController->renderFile()
+#4 /opt/lampp/htdocs/YiiRoot/framework/zii/widgets/CListView.php(242): ItemsController->renderPartial()
+#5 /opt/lampp/htdocs/YiiRoot/framework/zii/widgets/CBaseListView.php(158): CListView->renderItems()
+#6 unknown(0): CListView->renderSection()
+#7 /opt/lampp/htdocs/YiiRoot/framework/zii/widgets/CBaseListView.php(141): preg_replace_callback()
+#8 /opt/lampp/htdocs/YiiRoot/framework/zii/widgets/CBaseListView.php(126): CListView->renderContent()
+#9 /opt/lampp/htdocs/YiiRoot/framework/web/CBaseController.php(174): CListView->run()
+#10 /opt/lampp/htdocs/todo.yii/protected/views/items/index.php(16): ItemsController->widget()
+#11 /opt/lampp/htdocs/YiiRoot/framework/web/CBaseController.php(127): require()
+#12 /opt/lampp/htdocs/YiiRoot/framework/web/CBaseController.php(96): ItemsController->renderInternal()
+#13 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(870): ItemsController->renderFile()
+#14 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(783): ItemsController->renderPartial()
+#15 /opt/lampp/htdocs/todo.yii/protected/controllers/ItemsController.php(137): ItemsController->render()
+#16 /opt/lampp/htdocs/YiiRoot/framework/web/actions/CInlineAction.php(50): ItemsController->actionIndex()
+#17 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(309): CInlineAction->runWithParams()
+#18 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilterChain.php(134): ItemsController->runAction()
+#19 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#20 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#21 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CInlineFilter.php(59): ItemsController->filterAccessControl()
+#22 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#23 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(292): CFilterChain->run()
+#24 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(266): ItemsController->runActionWithFilters()
+#25 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(276): ItemsController->run()
+#26 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#27 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#28 /opt/lampp/htdocs/todo.yii/index.php(13): CWebApplication->run()
+REQUEST_URI=/todo.yii/index.php?r=items/index
+in /opt/lampp/htdocs/todo.yii/protected/views/items/_view.php (6)
+in /opt/lampp/htdocs/todo.yii/protected/views/items/index.php (16)
+in /opt/lampp/htdocs/todo.yii/protected/controllers/ItemsController.php (137)
+2012/04/22 11:04:32 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'create_time' in 'order clause'. The SQL statement executed was: SELECT * FROM `items` `t` ORDER BY create_time DESC LIMIT 10.
+in /opt/lampp/htdocs/todo.yii/protected/views/items/index.php (12)
+in /opt/lampp/htdocs/todo.yii/protected/controllers/ItemsController.php (141)
+in /opt/lampp/htdocs/todo.yii/index.php (13)
+2012/04/22 11:04:32 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'create_time' in 'order clause'. The SQL statement executed was: SELECT * FROM `items` `t` ORDER BY create_time DESC LIMIT 10' in /opt/lampp/htdocs/YiiRoot/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /opt/lampp/htdocs/YiiRoot/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /opt/lampp/htdocs/YiiRoot/framework/db/ar/CActiveRecord.php(1287): CDbCommand->queryAll()
+#2 /opt/lampp/htdocs/YiiRoot/framework/db/ar/CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /opt/lampp/htdocs/YiiRoot/framework/web/CActiveDataProvider.php(150): CActiveRecord->findAll(Object(CDbCriteria))
+#4 /opt/lampp/htdocs/YiiRoot/framework/web/CDataProvider.php(137): CActiveDataProvider->fetchData()
+#5 /opt/lampp/htdocs/YiiRoot/framework/zii/widgets/CBaseListView.php(105): CDataProvider->getData()
+#6 /opt/lampp/htdocs/YiiRoot/framework/zii/widgets/CListView.php(173): CBaseListView->init()
+#7 /opt/lampp/htdocs/YiiRoot/framework/web/CBaseController.php(148): CListView->init()
+#8 /opt/lampp/htdocs/YiiRoot/framework/web/CBaseController.php(173): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#9 /opt/lampp/htdocs/todo.yii/protected/views/items/index.php(12): CBaseController->widget('zii.widgets.CLi...', Array)
+#10 /opt/lampp/htdocs/YiiRoot/framework/web/CBaseController.php(127): require('/opt/lampp/htdo...')
+#11 /opt/lampp/htdocs/YiiRoot/framework/web/CBaseController.php(96): CBaseController->renderInternal('/opt/lampp/htdo...', Array, true)
+#12 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(870): CBaseController->renderFile('/opt/lampp/htdo...', Array, true)
+#13 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(783): CController->renderPartial('index', Array, true)
+#14 /opt/lampp/htdocs/todo.yii/protected/controllers/ItemsController.php(141): CController->render('index', Array)
+#15 /opt/lampp/htdocs/YiiRoot/framework/web/actions/CInlineAction.php(50): ItemsController->actionIndex()
+#16 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#17 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#18 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#19 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#20 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#21 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#22 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(292): CFilterChain->run()
+#23 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(276): CController->run('index')
+#25 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(135): CWebApplication->runController('items/index')
+#26 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#27 /opt/lampp/htdocs/todo.yii/index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/todo.yii/index.php?r=items/index
+HTTP_REFERER=http://localhost/todo.yii/index.php?r=site/page&view=about
+---

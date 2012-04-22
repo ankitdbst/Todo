@@ -70,7 +70,7 @@ class ItemsController extends Controller
         {
             $model->attributes=$_POST['Items'];
             if($model->save())
-                $this->redirect(array('view','id'=>$model->id));
+                $this->redirect(array('index'));
         }
 
         $this->render('create',array(
@@ -94,7 +94,7 @@ class ItemsController extends Controller
         {
             $model->attributes=$_POST['Items'];
             if($model->save())
-                $this->redirect(array('view','id'=>$model->id));
+                $this->redirect(array('index'));
         }
 
         $this->render('update',array(
@@ -109,17 +109,11 @@ class ItemsController extends Controller
      */
     public function actionDelete($id)
     {
-        if(Yii::app()->request->isPostRequest)
-        {
-            // we only allow deletion via POST request
-            $this->loadModel($id)->delete();
+        $this->loadModel($id)->delete();
 
-            // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-            if(!isset($_GET['ajax']))
-                $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
-        }
-        else
-            throw new CHttpException(400,'Invalid request. Please do not repeat this request again.');
+        // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+        if(!isset($_GET['ajax']))
+            $this->redirect(array('index'));
     }
 
     /**
@@ -127,9 +121,23 @@ class ItemsController extends Controller
      */
     public function actionIndex()
     {
-        $dataProvider=new CActiveDataProvider('Items');
+        $model=new Items;
+
+        if(isset($_POST['Items']))
+        {
+            $model->attributes=$_POST['Items'];
+            if($model->save())
+                $this->redirect(array('index'));
+        }
+
+        $dataProvider=new CActiveDataProvider('Items',
+        array(
+            'criteria'=>array('order'=>'create_time DESC')
+        ));
+
         $this->render('index',array(
             'dataProvider'=>$dataProvider,
+            'model'=>$model,
         ));
     }
 
